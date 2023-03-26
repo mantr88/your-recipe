@@ -1,0 +1,96 @@
+// @import '~node_modules/modern-normalize/modern-normalize.css';
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: $main-bg-color;
+    color: $main-font-color;
+    letter-spacing: 0.03em;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: $main-font-color;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1140px) {
+    width: 1200px;
+  }
+}
+
+.preferences,
+.our-work,
+.our-team,
+.clients,
+.galery,
+.hero {
+  @media screen and (max-width: 1199px) {
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+  @media screen and (min-width: 1140px) {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.our-work__title,
+.our-team__title,
+.clients_title {
+
+    margin-bottom: 30px;
+
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.18;
+    text-align: center;
+
+    @media screen and (min-width: 1140px) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16;
+
+  }
+}
