@@ -1,52 +1,131 @@
+.title{
+    margin-bottom: 100px;
+}
+
 .query {
     display: flex;
 }
-.query_text {
-    width: 358px;
-    padding: 15px 16px;
+// .query_text {
+//     width: 358px;
+//     padding: 15px 16px;
 
-    color: rgba(255, 255, 255, 0.6);
+//     color: rgba(255, 255, 255, 0.6);
 
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    background-color: $secondary-bg-color;
+//     border: 1px solid rgba(255, 255, 255, 0.3);
+//     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+//     border-radius: 4px;
+//     background-color: $secondary-bg-color;
 
-    @media screen and (max-width: 767px) {
-        width: 95vw;
-        max-width: 450px;   
-    }  
+//     @media screen and (max-width: 767px) {
+//         width: 95vw;
+//         max-width: 450px;   
+//     }  
 
-    @media screen and (min-width: 768px) {
-        width: 450px;  
-    }
+//     @media screen and (min-width: 768px) {
+//         width: 450px;  
+//     }
     
-    @media screen and (min-width: 1200px) {
-        width: 358px;   
-    } 
+//     @media screen and (min-width: 1200px) {
+//         width: 358px;   
+//     } 
+// }
+// .query_submit {
+//      padding: 10px 31px;
+
+//     display: flex;
+//     align-items: center;
+//     text-align: center;
+    
+//     font-weight: 700;
+//     font-size: 16px;
+//     line-height: 1.88;
+//     letter-spacing: 0.06em;
+//     color: $white-font-color;
+
+//     background: #2196F3;
+//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+//     border-radius: 4px;
+//     border: transparent;
+//     cursor: pointer;
+
+//     @media screen and (min-width: 1200px) {
+//         padding-left: 28px;
+//         padding-right: 28px;
+//         margin-left: 10px;
+//     }
+// }
+
+.input {
+  font-family: 'Segoe UI', sans-serif;
+//   margin: 1em 0 1em 0;
+//   max-width: 190px;
+  position: relative;
 }
-.query_submit {
-     padding: 10px 31px;
 
-    display: flex;
-    align-items: center;
-    text-align: center;
-    
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-    color: $white-font-color;
+.input input {
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid rgb(56, 18, 193);
+  background-color: transparent;
+  border-radius: 20px;
+  width: 100%;
+}
 
-    background: #2196F3;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    border: transparent;
-    cursor: pointer;
+.input label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  top: 1%;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+  color: rgb(100, 100, 100);
+}
 
-    @media screen and (min-width: 1200px) {
-        padding-left: 28px;
-        padding-right: 28px;
-        margin-left: 10px;
-    }
+.input :is(input:focus)~label {
+  transform: translateY(-30%) scale(.9);
+  margin: -1.5em;
+  margin-left: 1.3em;
+  padding: 1.4em;
+//   background-color: #212121;
+}
+
+.inputGroup :is(input:focus, input:valid) {
+  border-color: rgb(37, 37, 211);
+}
+
+button {
+  display: flex;
+  margin-left: 50px;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0.8em 1.3em 0.8em 0.9em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  border: none;
+  letter-spacing: 0.05em;
+  border-radius: 16px;
+}
+
+button svg {
+  margin-right: 3px;
+  transform: rotate(30deg);
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button span {
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button:hover svg {
+  transform: translateX(5px) rotate(90deg);
+}
+
+button:hover span {
+  transform: translateX(7px);
 }

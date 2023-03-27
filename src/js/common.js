@@ -28,7 +28,7 @@ const render = (items) => {
                 </div>
               </a>
     </li>
-    `);
+    `).join('');
     
     refs.dishes.innerHTML = '';
     refs.dishes.insertAdjacentHTML('beforeend', markup);
